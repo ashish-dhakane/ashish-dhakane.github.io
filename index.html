@@ -8,107 +8,18 @@
   <script src="js/app.js"></script>
   <title>Ashish Personal Website - Home</title>
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    /* Basic Styling */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f5f5f5;
-      color: #222;
-      transition: background-color 0.4s, color 0.4s;
-    }
-
-    nav {
-      display: flex;
-      justify-content: flex-start;
-      background-color: #333;
-      padding: 10px 15px;
-      position: relative;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Day/Night Button */
-    #themeToggle {
-      position: absolute;
-      right: 20px;
-      top: 10px;
-      background-color: #555;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    #themeToggle:hover {
-      background-color: #777;
-      transform: scale(1.05);
-    }
-
-    /* Dark Mode */
-    body.dark-mode {
-      background-color: #121212;
-      color: #f5f5f5;
-    }
-
-    body.dark-mode nav {
-      background-color: #222;
-    }
-
-    body.dark-mode #themeToggle {
-      background-color: #ccc;
-      color: #111;
-    }
-
-    h1, h2 {
-      text-align: center;
-    }
-
-    .welcome-message {
-      padding: 20px;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-    }
-
-    body.dark-mode footer {
-      background-color: #222;
-    }
-  </style>
 </head>
 <body ng-controller="MainController">
 
-  <!-- Navbar -->
+  <!-- Navbar (Always Visible) -->
   <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="personaldetails.html">Personal Details</a>
     <a href="project.html">Projects</a>
     <a href="contact.html">Contact</a>
-
-    <!-- Theme Toggle Button -->
-    <button id="themeToggle">🌙 Night</button>
   </nav>
 
-  <!-- Name -->
+  <!-- Name (no typing animation) -->
   <h1>Hi, my name is Ashish</h1>
 
   <!-- About Me -->
@@ -119,23 +30,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Ashish. All rights reserved.</p>
-  </footer>
-
-  <script>
-    // Day/Night Mode Toggle
-    const toggleBtn = document.getElementById("themeToggle");
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-
-      // Change button text and icon
-      if (document.body.classList.contains("dark-mode")) {
-        toggleBtn.textContent = "☀️ Day";
-      } else {
-        toggleBtn.textContent = "🌙 Night";
-      }
-    });
-  </script>
+    <p>&copy; 2024 Ashish. All rights reserved.</p> 
 
 </body>
 </html>
